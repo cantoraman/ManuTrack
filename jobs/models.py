@@ -11,7 +11,7 @@ class Manufacturer(models.Model):
 
 class Job(models.Model):
     designer = models.ForeignKey(Designer, on_delete=models.CASCADE)
-    manufacturer = models.ForeignKey(Manufacturer, on_delete=models.SET_NULL)
+    manufacturer = models.ForeignKey(Manufacturer, on_delete=models.SET_NULL, null=True)
     job_client = models.CharField(max_length=300)
     job_description = models.CharField(max_length=500)
     creation_date = models.DateTimeField('creation date')

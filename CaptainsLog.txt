@@ -27,3 +27,8 @@ python manage.py migrate to set the DB
 
 start creating classes/models
 
+app is done, add it to settings.py @ root
+in apps=> 'jobs.apps.JobConfig',
+
+
+
