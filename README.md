@@ -37,3 +37,4 @@ Manufacturing workers should follow these directives and provide feedback to the
 ### Tech:
 - Python
 - Django
+- SQLite

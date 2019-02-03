@@ -1,2 +1,29 @@
 django-admin startproject ManuTrack
 git init
+add readme.md
+python manage.py runserver
+-log http://127.0.0.1:8000/
+
+python manage.py startapp jobs
+add basic view to views
+create urls.py to map url reqs
+
+at urls OF JOBS:
+import path from djangourls
+import views in the current level
+set the '' path to point views.index
+
+at Urls of ROOT
+add include to include own packages
+aaaaand include the jobs.url on the url patterns
+>
+The include() function allows referencing other URLconfs. Whenever Django encounters include(), it chops off whatever part of the URL matched up to that point and sends the remaining string to the included URLconf for further processing.
+
+set the timezone to UTC at settings.py
+
+python manage.py migrate to set the DB
+
+>sqlite3 enters sqlite console / ctrl D exits
+
+start creating classes/models
+
