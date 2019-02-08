@@ -30,5 +30,46 @@ start creating classes/models
 app is done, add it to settings.py @ root
 in apps=> 'jobs.apps.JobConfig',
 
+make migrations = python manage.py makemigrations jobs
 
+then migrate = python manage.py migrate
+
+-
+In the playground I was a little bit clumsy. So, let's make a recap:
+
+Enter the shell with
+    python manage.py shell
+
+import all of your models
+    from jobs.models import Designer, Manufacturer, Job
+
+crete an instance of your model
+
+m = Manufacturer(manufacturer_name="Hasan")
+
+this instantiates it but does not save it to the database
+to save it:
+
+m.save()
+
+now, m.id will show its id
+
+d = Designer(designer_name="Sevtap")
+d.save()
+
+Designer.objects.all()   -will now bring all of our designers
+
+To create a job:
+from django.utils import timezone
+t=timezone.now()
+d.job_set.create(manufacturer=m, (other information optional) ,creation_date = t, start_date=t,completion_date=t,rejection_date=t)
+
+In [49]: Job.objects.all()[0].completion_date
+Out[49]: datetime.datetime(2019, 2, 8, 7, 45, 17, 519401, tzinfo=<UTC>)
+
+In [50]: Job.objects.all()
+Out[50]: <QuerySet [<Job: >, <Job: >]>
+
+
+And whenever you change the models, always do, makemigrations on the app (job) and do migrate
 
