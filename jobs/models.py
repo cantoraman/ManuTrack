@@ -27,7 +27,7 @@ class Job(models.Model):
     is_flagged = models.BooleanField(default=False)
     in_progress = models.BooleanField(default=False)
     is_completed = models.BooleanField(default=False)
-    rejection_text = models.TextField(max_length=500)
+    rejection_text = models.TextField(max_length=500, blank=True)
 
     def __str__(self):
         return self.job_description
