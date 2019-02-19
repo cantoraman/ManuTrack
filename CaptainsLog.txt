@@ -151,9 +151,109 @@ from .models import Job, Manufacturer, Designer
 admin.site.register([Job,Manufacturer, Designer])
 
 
->
+>>>>>>>>>
 
 Now lets design some views
+
+but before, lets create some HTML templates for the views
+create templates and templates/jobs directories and index.html template
+
+in the HTML template:
+             {% if active_jobs_list %}
+                 <ul>
+            {% for active_job in active_jobs_list %}
+                  <li><a href="/jobs/{{active_job.id}}/">{{ active_job.job_description }}</a></li>
+            {% endfor %}
+                 </ul>
+    {% else %}
+        <p>No Jobs for you</p>
+    {% endif %}
+
+this will help us
+
+>>> now go to views to add the template to the http response with its python payload >>>>>>
+but wait... it is very common. So we have a shortcut:
+
+
+[removes loader being imported and HTTPResponse too]
+
+def index(request):
+    active_jobs = Job.objects.filter(is_completed=False)
+    context = {
+        'active_jobs_list': active_jobs,
+    }
+    return render(request, 'jobs/index.html', context)
+
+And lets make sure we have an '' (empty) path at urlpatterns
+
+urlpatterns = [
+    path('', views.index, name='index'),
+]
+
+------
+
+now lets add exception handling to the details
+
+from django.http import Http404
+def job_detail(request, job_id):
+    try:
+        job = Job.objects.get(pk=job_id)
+    except Job.DoesNotExist:
+        raise Http404('The job you are looking for does not exist')
+    return render(request, 'jobs/detail.html', {'job': job})
+
+Create a template html called job_details.html
+and basically fill it with essential stuff
+
+Now:
+    when we do this, there are some good stuff we can use from the django's template language
+    it doesn't just allow python code to be executed in the template
+    but it does have some nice shortcuts
+    google it
+
+{{ name|lower }}
+{{ some_text|escape|linebreaks }}
+{{ bio|truncatewords:50 }}
+{{ some_list|join:", "}}
+{{ string_or_a_list|length}}
+{{ file_size_in_bytes|filesizeformat }} -byte->x.x MB or xxx Bytes
+
+
+
+::::::::::::::::
+at this stage I dived into template inheritance subject which is a powerful tool to keep the code dry
+
+I'll follow the considerate code's tutorial on mobile chrome
+Note1:
+The cycle follows this pattern
+visit jobs/title
+url pattern invokes views.add_title
+add_title renders 'jobs/title.html'
+title.html sees that it need a base.html, calls base.html and nests itself there
+
+Note2:
+first check the guys git repo to see where he keeps the html's
+::::::::::::::::::::
+
+Back again on 19th of Feb... made a get_object_or_404 for designer
+I kept the first exception for educational purposes
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+and let's connect them to url patterns
 
 
 

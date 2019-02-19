@@ -1,0 +1,19 @@
+
+<ul style="list-style-type:none;">
+    <li>{{ job.manufacturer }}</li>
+    <li>{{ job.designer }}</li>
+    <li>{{ job.creation_date|default:'None' }}</li>
+    <li>{{ job.completion_date|default:'None' }}</li>
+    <li>{{ job.job_client |default:'None' }}</li>
+    <li>{{ job.job_description|default:'None' }}</li>
+    <li>{{ job.creation_date|default:'None' }}</li>
+    <li>{{ job.start_date|default:'None' }}</li>
+    <li>{{ job.completion_date|default:'None' }}</li>
+    <li>{{ job.rejection_date |default:'None' }}</li>
+    <li>{{ job.is_flagged|default:'None' }}</li>
+    <li>{{ job.in_progress |default:'None' }}</li>
+    <li>{{ job.is_completed|default:'None' }}</li>
+    <li>{{ job.rejection_text |default:'None' }}</li>
+    {{ some_list|join:", "}}
+    {{ some_list}}
+</ul>

@@ -1,0 +1,9 @@
+{% if designers %}
+    <ul>
+        {% for designer in designers %}
+        <li><a href="/jobs/designers/{{designer.id}}/">{{ designer.designer_name }}</a></li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>No Designers for you</p>
+{% endif %}
