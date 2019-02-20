@@ -249,8 +249,19 @@ has become
 
 <li><a href=" {% url 'jobs:job detail' active_job.id %}">{{ active_job.job_description }}</a></li>
 
+---------------------
 
+20/02/19
+At this point I wanted to add an inheritance feature to deliver different base.html for different types of browsers and different platforms such as mobile
 
+Something like:...
+{% extends request.is_mobile|yesno:"jobs/mobile_base.html,jobs/base.html" %}
+
+I have decided to leave it to another stage...
+A package to implement:
+https://github.com/selwin/django-user_agents
+
+---------------------
 
 
 

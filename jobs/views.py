@@ -22,11 +22,6 @@ def job_detail(request, job_id):
                                                     'some_list': some_list})
 
 
-def add_title(request):
-    # this is a dummy view
-    return render(request, 'jobs/title.html')
-
-
 def designers_list(request):
     designers = Designer.objects.all()
     context = {
@@ -37,7 +32,8 @@ def designers_list(request):
 
 def designer_detail(request, designer_id):
     designer = get_object_or_404(Designer, pk=designer_id)
-    return render(request, 'jobs/designer_details.html', {'designer': designer})
+    return render(request, 'jobs/designer_details.html', {'designer': designer,
+                                                          })
 
 
 # def manufacturers_list(request):

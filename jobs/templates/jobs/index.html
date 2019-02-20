@@ -1,3 +1,7 @@
+{% extends "jobs/base.html" %}
+
+{% block content %}
+
 {% if active_jobs_list %}
     <ul>
         {% for active_job in active_jobs_list %}
@@ -7,3 +11,5 @@
 {% else %}
     <p>No Jobs for you</p>
 {% endif %}
+
+{% endblock %}
