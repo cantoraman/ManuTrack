@@ -238,9 +238,16 @@ first check the guys git repo to see where he keeps the html's
 Back again on 19th of Feb... made a get_object_or_404 for designer
 I kept the first exception for educational purposes
 
+Before proceeding with template inheritance,
+lets remove hardcoded urls in the lists
 
+first add app_name to urls.py so that django can tell the difference between other apps in our projects
 
+<li><a href="/jobs/{{active_job.id}}/">{{ active_job.job_description }}</a></li>
 
+has become
+
+<li><a href=" {% url 'jobs:job detail' active_job.id %}">{{ active_job.job_description }}</a></li>
 
 
 

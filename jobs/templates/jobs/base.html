@@ -3,9 +3,13 @@
     <title>{% block title %} Title to be overwritten {% endblock %}</title>
 </head>
 <body>
+<li><a href=" {% url 'jobs:list of designers' %}"> Designers </a></li>
+
+
 {% block content %}
 Content to be overwritten
 {% endblock %}
+
 {% block footer %}
 Footer to be overwritten
 {% endblock %}
