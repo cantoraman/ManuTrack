@@ -1,20 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8297659f-3400-4834-8b72-0b0721b2ea01" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/jobs/templates/jobs/footer.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jobs/templates/jobs/mobile_base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CaptainsLog.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CaptainsLog.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jobs/templates/jobs/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/jobs/templates/jobs/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jobs/templates/jobs/designer_details.html" beforeDir="false" afterPath="$PROJECT_DIR$/jobs/templates/jobs/designer_details.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jobs/templates/jobs/designers.html" beforeDir="false" afterPath="$PROJECT_DIR$/jobs/templates/jobs/designers.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jobs/templates/jobs/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/jobs/templates/jobs/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jobs/templates/jobs/job_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/jobs/templates/jobs/job_detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jobs/templates/jobs/title.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jobs/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/jobs/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jobs/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/jobs/views.py" afterDir="false" />
-    </list>
+    <list default="true" id="8297659f-3400-4834-8b72-0b0721b2ea01" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,7 +20,7 @@
         <counts>
           <entry key="gitignore" value="1" />
           <entry key="html" value="17" />
-          <entry key="md" value="2" />
+          <entry key="md" value="3" />
           <entry key="py" value="39" />
           <entry key="txt" value="4" />
         </counts>
@@ -41,7 +28,7 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="HTML" value="17" />
-          <entry key="Markdown" value="2" />
+          <entry key="Markdown" value="3" />
           <entry key="PLAIN_TEXT" value="5" />
           <entry key="Python" value="39" />
         </counts>
@@ -174,17 +161,20 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/CaptainsLog.txt">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="65">
+                <state relative-caret-position="236">
                   <caret line="247" column="10" lean-forward="true" selection-start-line="247" selection-start-column="10" selection-end-line="247" selection-end-column="10" />
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/.gitignore">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="60">
-                  <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+            <entry file="file://$PROJECT_DIR$/README.md">
+              <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+                <state split_layout="SPLIT">
+                  <first_editor>
+                    <caret column="28" lean-forward="true" selection-start-column="3" selection-end-column="28" />
+                  </first_editor>
+                  <second_editor />
                 </state>
               </provider>
             </entry>
@@ -306,7 +296,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
       <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.14517266" />
@@ -486,16 +475,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="165">
-            <caret line="11" column="16" lean-forward="true" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/jobs/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="267">
@@ -506,17 +485,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CaptainsLog.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="65">
-          <caret line="247" column="10" lean-forward="true" selection-start-line="247" selection-start-column="10" selection-end-line="247" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CaptainsLog.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="236">
+          <caret line="247" column="10" lean-forward="true" selection-start-line="247" selection-start-column="10" selection-end-line="247" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor>
+            <caret column="28" lean-forward="true" selection-start-column="3" selection-end-column="28" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
