@@ -36,6 +36,13 @@ def designer_detail(request, designer_id):
                                                           })
 
 
+def job_edit(request, job_id):
+    pass
+
+
+def job_update(request, job_id):
+    pass
+
 # def manufacturers_list(request):
 #    return HttpResponse('List of Manufacturers')
 
