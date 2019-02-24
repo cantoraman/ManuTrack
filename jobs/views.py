@@ -15,11 +15,10 @@ def index(request):
 def job_detail(request, job_id):
     try:
         job = Job.objects.get(pk=job_id)
-        some_list = ['asd', 'sdfsdf', '2312312']
     except Job.DoesNotExist:
         raise Http404('The job you are looking for does not exist')
     return render(request, 'jobs/job_detail.html', {'job': job,
-                                                    'some_list': some_list})
+                                                    })
 
 
 def designers_list(request):
@@ -37,7 +36,9 @@ def designer_detail(request, designer_id):
 
 
 def job_edit(request, job_id):
-    pass
+    job = get_object_or_404(Job, pk=job_id)
+    return render(request, 'jobs/job_edit.html', {'job': job,
+                                                  })
 
 
 def job_update(request, job_id):

@@ -5,7 +5,7 @@
 {% if active_jobs_list %}
     <ul>
         {% for active_job in active_jobs_list %}
-        <li><a href=" {% url 'jobs:job detail' active_job.id %}">{{ active_job.job_description }}</a></li>
+        <li><a href=" {% url 'jobs:job detail' active_job.id %}">{{ active_job.job_description }}</a> <a href=" {% url 'jobs:edit job' active_job.id %}">EDIT</a> </li>
         {% endfor %}
     </ul>
 {% else %}

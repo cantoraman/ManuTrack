@@ -1,0 +1,42 @@
+{% extends "jobs/base.html" %}
+
+{% block content %}
+
+
+{% if error_message %}
+    <p>ERR- {{ error_message }} </p>
+
+{% else %}
+
+    <h2>Edit {{ job.client }}:{{ job.description }}</h2>
+
+    <form action="{% url 'jobs:edit job' job.id %}" method="post">
+        {% csrf_token %}
+        <label for="job-description">Job Description</label>
+        <input type="text" name="job-description" id="job-description" value="{{ job.description }}">
+
+
+            <li>{{ job.manufacturer }}</li>
+            <li>{{ job.designer }}</li>
+            <li>{{ job.creation_date|default:'None' }}</li>
+            <li>{{ job.completion_date|default:'None' }}</li>
+            <li>{{ job.job_client |default:'None' }}</li>
+            <li>{{ job.job_description|default:'None' }}</li>
+            <li>{{ job.creation_date|default:'None' }}</li>
+            <li>{{ job.start_date|default:'None' }}</li>
+            <li>{{ job.completion_date|default:'None' }}</li>
+            <li>{{ job.rejection_date |default:'None' }}</li>
+            <li>{{ job.is_flagged|default:'None' }}</li>
+            <li>{{ job.in_progress |default:'None' }}</li>
+            <li>{{ job.is_completed|default:'None' }}</li>
+            <li>{{ job.rejection_text |default:'None' }}</li>
+
+    </form>
+
+{% endif %}
+
+
+{% endblock %}
+
+
+
